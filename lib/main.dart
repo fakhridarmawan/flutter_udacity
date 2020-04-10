@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_udacity/category.dart';
 
 void main() => runApp(MyApp());
+
+const _categoryName = 'Cake';
+const _categoryIcon = Icons.cake;
+const _categoryColor = Colors.green;
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Unit Converter',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -20,8 +25,15 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Center(
-        child: Text('hello'),
+      home: Scaffold(
+        backgroundColor: Colors.green[100],
+        body: Center(
+          child: Category(
+            name: _categoryName, 
+            color: _categoryColor,
+            icon: _categoryIcon,
+          ),
+        ),
       ),
     );
   }
