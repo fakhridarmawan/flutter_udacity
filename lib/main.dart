@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_udacity/category.dart';
+import 'package:flutter_udacity/category_route.dart';
 
 void main() => runApp(MyApp());
-
-const _categoryName = 'Cake';
-const _categoryIcon = Icons.cake;
-const _categoryColor = Colors.green;
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -25,16 +21,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        backgroundColor: Colors.green[100],
-        body: Center(
-          child: Category(
-            name: _categoryName, 
-            color: _categoryColor,
-            icon: _categoryIcon,
-          ),
-        ),
-      ),
+      home: CategoryRoute()
     );
   }
 }
